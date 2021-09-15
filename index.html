@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  onclick="jump()">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,20 @@
     <title>Flappy Bird</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h2>Flappy Bird</h2>
-    <div id="game">
-        <div id="block"></div>
-        <div id="hole"></div>
-        <div id="character"></div>
+    <div class="container">
+        <div id="game">
+            <div id="block"></div>
+            <div id="hole"></div>
+            <div id="character"></div>
+        </div>
+        <div id="gameclone">
+            <div id="blockclone"></div>
+        </div>
     </div>
 </body>
 <script src="app.js"></script>
+
 </html>

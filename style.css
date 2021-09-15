@@ -8,32 +8,40 @@ body{
     background: rgb(70, 69, 69);
     color: white;
 }
+.container{
+    border: 1px solid #aaa;
+    width: 400px;
+    margin: 20px auto 0;
+}
 
 #game{
     width: 400px;
     height: 500px;
-    border: 1px solid black;
-    margin: 20px auto 0;
-    background-image: url('./img/canvas.png');
-    background-position: center;
-    background-size: cover;
+    /* border: 1px solid black; */
+    background-color: #71C5CF;
     overflow: hidden;
+    z-index: 2;
 }
 
 #block{
     width: 50px;
     height: 500px;
-    background-color: black;
+    background-color: green;
     position: relative;
     left: 400px;
-    animation: block 2s infinite;
-    -webkit-animation: block 2s infinite;
+    animation: block 2s linear infinite;
+    -webkit-animation: block 2s linear infinite;
 }
 
 @keyframes block{
     0%{left:400px}
     100%{left:-50px}
 }
+@keyframes bg{
+   from{ background-position-x: 0;}
+    to{background-position-x: -850px;}
+}
+
 #hole{
     width: 50px;
     height: 150px;
@@ -41,6 +49,43 @@ body{
     position: relative;
     left: 400px;
     top: -500px;
-    animation: block 2s infinite;
-    -webkit-animation: block 2s infinite;
+    animation: block 2s linear infinite;
+    -webkit-animation: block 2s linear infinite;
+}
+#gameclone{
+    width: 400px;
+    height: 150px;
+    margin: 0 auto 0;
+    overflow: hidden;
+    background-image: url('./img/canvas.png');
+    background-position-y: bottom;
+    background-size: 850px;
+    position: relative;
+    animation: bg 5s linear infinite;
+    -webkit-animation: bg 5s linear infinite ;
+}
+#blockclone{
+    width: 50px;
+    height: 500px;
+    background-color: green;
+    position: relative;
+    left: 400px;
+    animation: block 2s linear infinite;
+    -webkit-animation: block 2s linear infinite;
+}
+#character{
+    width: 30px;
+    height: 30px;
+    margin-left:20px ;
+    background-image: url('./img/bird.png');
+    background-size: cover;
+    background-position:center;
+    position: absolute;
+    top: 100px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    z-index: 1;
 }
