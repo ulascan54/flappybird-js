@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    text-align: center;
+    padding: 40px;
+    background: rgb(70, 69, 69);
+    color: white;
+}
+
+#game{
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    margin: 20px auto 0;
+    background-image: url('./img/canvas.png');
+    background-position: center;
+    background-size: cover;
+}
+
+#block{
+    width: 50px;
+}
