@@ -3,7 +3,25 @@ let hole = document.getElementById('hole')
 let character=document.getElementById('character')
 let jumping = 0
 let counter=0
+var audio = document.getElementById("audio1");
+var btn = document.getElementById("btnPause");
 
+
+
+function PausePlay() {
+    if (audio.paused) {
+        audio.play();
+        btn.value = "Pause";
+    } else if (audio.ended) {
+        audio.currentTime = 0;
+        audio.play();
+        btn.value = "Pause";
+    }
+    else {
+        audio.pause();
+        btn.value = "Play";
+    }
+} 
 document.addEventListener('keydown',(e)=>{
     if(e.keyCode==32){
         jump()
@@ -12,8 +30,9 @@ document.addEventListener('keydown',(e)=>{
 
 
 hole.addEventListener('animationiteration',()=>{
-    let random = -((Math.random()* 300)+150)
-    hole.style.top = random +'px';
+    var random = Math.random()*3;
+    var top = (random*100)+150
+    hole.style.top = -(top) + "px";
     counter++
 })
 

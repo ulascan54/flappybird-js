@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <h2>Flappy Bird</h2>
     <div class="container">
         <div id="game">
             <div id="block"></div>
@@ -20,6 +19,13 @@
         <div id="gameclone">
             <div id="blockclone"></div>
         </div>
+    </div>
+    <h2>Flappy Bird</h2>
+    <audio src="flapp.mp3" id="audio1" autoplay loop>
+        Audio is not supported.
+    </audio>
+    <div id="control">
+        <input type="button" id="btnPause" onclick="PausePlay()" value="Play" />
     </div>
 </body>
 <script src="app.js"></script>
